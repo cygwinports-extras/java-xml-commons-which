@@ -1,0 +1,18 @@
+--- origsrc/xml-commons-1.0.b2/java/which.xml	2002-02-06 09:52:28.000000000 -0600
++++ src/xml-commons-1.0.b2/java/which.xml	2009-12-01 04:25:48.982488000 -0600
+@@ -64,6 +64,7 @@ Build file for org.apache.env.Which serv
+   <target name="compile" depends="init"
+     description="Compile all classes">
+    <javac srcdir="${src.dir}" destdir="${build.classes.dir}" 
++       source="1.4" target="1.4"
+        includes="${env.subdir}/*.java" />
+   </target>
+ 
+@@ -106,6 +107,7 @@ Build file for org.apache.env.Which serv
+     
+     <mkdir dir="${docs.java.dir}"/>  
+ 	  <javadoc packagenames="org.apache.env"
++          source="1.4"
+ 		  sourcepath="${src.dir}"
+ 		  destdir="${docs.java.dir}"
+           author="true"

@@ -1,0 +1,20 @@
+ORIG_PN="xml-commons"
+inherit ant
+
+DESCRIPTION="Java environment checker"
+HOMEPAGE="http://xml.apache.org/commons/"
+SRC_URI="mirror://apache/xml/commons/${ORIG_PN}-${PV}.tar.gz"
+SRC_DIR="${ORIG_PN}-${PV}/java"
+
+PATCH_URI="1.0.b2-source-1.4.patch"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	rm -fr build
+}
+
+ANT_BUILD_XML="which.xml"
+ANT_INSTALL_JARS="build/*.jar"
+ANT_INSTALL_JAVADOC="build/docs/javadocs"
+
+DOCS="../README.html"

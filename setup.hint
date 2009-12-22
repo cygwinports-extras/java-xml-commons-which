@@ -1,0 +1,6 @@
+category: Java
+sdesc: "Java environment checker"
+ldesc: "Which is the command line interface to the org.apache.env 
+package. Simply put, it provides a simplistic check of a user's actual 
+environment for debugging and product support purposes by detecting the 
+specific versions of commonly installed classes in the environment."
